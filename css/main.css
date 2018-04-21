@@ -63,3 +63,86 @@ body{
     margin: auto;
     height: 300px;
 }
+
+.woow{
+    margin-top:80%;
+}
+
+.qwerty{
+    margin-top:10%;
+}
+
+.woo{
+    margin-top: 20%;
+    text-align: justify;
+    
+}
+
+.bt-up{
+    margin-top:10%;
+    border-radius: 30px 30px 30px 30px;
+    width: 50%;
+    background-color: #D9ECFC;
+    color: #333333;
+    margin-left: 20%;
+}
+
+.title{
+    font-size: 20px;
+    font-family: Montserrat;
+    letter-spacing: 2%;
+}
+
+.yahoo{
+    margin-top:-5%;
+}
+
+.features{
+    font-weight: bold;
+}
+
+.text{
+    text-align: left;
+}
+
+.map{
+    margin-top: 10%;
+}
+.last{
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.llast{
+    text-align: center;
+}
+
+.bt-down{
+    margin-top:2%;
+    border-radius: 30px 30px 30px 30px;
+    width: 40%;
+    background-color: #D9ECFC;
+    color: #333333;
+    margin-left: 30%;
+}
+.centered{
+    position: absolute;
+    top: 360%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+li{
+color: #BDBDBD;
+font-size: 24px;
+}
+
+.data{
+    margin-left:40%;
+    margin-top:5%;
+}
+
+.hr{
+    width: 80%;
+}

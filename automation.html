@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arduino Department :: Start Innovation Hub</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+    
+   
+    </style>
+    </head>
+    <body>
+    <div>
+        <div class="sidenav mt-5">
+            <img src="img/dashboard.svg" class="ml-4" width="40px" height="70px">
+            <img src="img/settings.svg" class="ml-4 settings" width="40px" height="70px">
+
+        </div>
+        
+        <div class="main mt-5">
+            <div class="row">
+                <!-- First Break for fan, bulb and socket-->
+                <div class="col-5">
+                    <!-- Break into two for fan seperate -->
+                    <div class="row">
+                    <!-- Break for fan seperate -->
+                        <div class="col-6 ">
+                            <div class="card height" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fan Speed</h5>
+                                    <hr class="hr1">
+                                    <ul class="pt-5">
+                                        <li class="d-inline">65%</li>
+                                        <li class="text-right  d-inline"><img src="img/fan.svg" class="fan"></li>
+                                    </ul>
+                                  
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="col-3 mb-3">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bulb Control</h5>
+                                        <hr class="hr1">
+                                        <img src="img/bulb.svg" class="bulb">
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                                    
+                            <div class="col-3">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Socket Control</h5>
+                                        <hr class="hr1">
+                                        <img src="img/socket.svg" class="socket">                                
+                                        <label class="switch">
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+
+                </div>
+
+
+                <!-- Second Break for Energy -->
+                
+                <script>
+                    window.onload = function () {
+                        
+                        var chart = new CanvasJS.Chart("chartContainer", {
+                            animationEnabled: true,
+                            title:{
+                                text: "Energy Usage"
+                            },
+                            axisX:{
+                                valueFormatString: "DD MMM",
+                                crosshair: {
+                                    enabled: true,
+                                    snapToDataPoint: true
+                                }
+                            },
+                            axisY: {
+                                includeZero: false,
+                                valueFormatString: "$##0.00",
+                                crosshair: {
+                                    enabled: true,
+                                    snapToDataPoint: true,
+                                    labelFormatter: function(e) {
+                                        return "$" + CanvasJS.formatNumber(e.value, "##0.00");
+                                    }
+                                }
+                            },
+                            data: [{
+                                type: "area",
+                                xValueFormatString: "DD MMM",
+                                yValueFormatString: "$##0.00",
+                                dataPoints: [
+                                    { x: new Date(2016, 07, 01), y: 76.727997 },
+                                    { x: new Date(2016, 07, 02), y: 75.459999 },
+                                    { x: new Date(2016, 07, 03), y: 76.011002 },
+                                    { x: new Date(2016, 07, 04), y: 75.751999 },
+                                    { x: new Date(2016, 07, 05), y: 77.500000 },
+                                    { x: new Date(2016, 07, 08), y: 77.436996 },
+                                    { x: new Date(2016, 07, 09), y: 79.650002 },
+                                    { x: new Date(2016, 07, 10), y: 79.750999 },
+                                    { x: new Date(2016, 07, 11), y: 80.169998 },
+                                    { x: new Date(2016, 07, 12), y: 79.570000 },
+                                    { x: new Date(2016, 07, 15), y: 80.699997 },
+                                    { x: new Date(2016, 07, 16), y: 79.686996 },
+                                    { x: new Date(2016, 07, 17), y: 78.996002 },
+                                    { x: new Date(2016, 07, 18), y: 78.899002 },
+                                    { x: new Date(2016, 07, 19), y: 77.127998 },
+                                    { x: new Date(2016, 07, 22), y: 76.759003 },
+                                    { x: new Date(2016, 07, 23), y: 77.480003 },
+                                    { x: new Date(2016, 07, 24), y: 77.623001 },
+                                    { x: new Date(2016, 07, 25), y: 76.408997 },
+                                    { x: new Date(2016, 07, 26), y: 76.041000 },
+                                    { x: new Date(2016, 07, 29), y: 76.778999 },
+                                    { x: new Date(2016, 07, 30), y: 78.654999 },
+                                    { x: new Date(2016, 07, 31), y: 77.667000 }
+                                ]
+                            }]
+                        });
+                        chart.render();
+                        
+                    }
+                </script>
+
+                <div class="col-5" >
+                    <div id="chartContainer" class="pl-5" style="height: 300px" ></div>
+                </div>
+
+                
+                <div class="row mt-5 secondMain">
+                    <div class="col-6">
+                        <div class="card pb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Thermometer Control</h5>
+                                <hr class="hr2">
+                                <h5 class="text-right adjust text-secondary">100%</h5>
+                                <img src="img/progress.png" class="mx-auto d-block mt-4 img-fluid" alt="Progress Bar">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card pb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Humidity Control</h5>
+                                <hr class="hr2">
+                                <h5 class="text-right adjust text-secondary">100%</h5>
+                                <img src="img/progress.png" class="mx-auto d-block mt-4 img-fluid" alt="Progress Bar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+   
+</body>
+<!-- Bootstrap JS,Jquery and PopperJS -->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

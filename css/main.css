@@ -1,6 +1,7 @@
 body{
-    font-family: Hind;
-    overflow-x: hidden;
+   font-family: Hind;
+   overflow-x: hidden;
+   background-color: #F2F2F2;
 }
 
 .bg{
@@ -8,7 +9,7 @@ body{
 }
 
 .navbar{
- background-color: #F2F8FD !important;
+    background-color: #F2F8FD !important;
 }
 
 .nav-one{
@@ -145,4 +146,141 @@ font-size: 24px;
 
 .hr{
     width: 80%;
+}
+
+/* Automation Css */
+
+.main{
+    height: 500px;
+    width: 100%;
+    margin-left: 140px; /*Same as the width of the sidenav*/    
+}
+.secondMain{
+    /* height: 500px; */
+    width: 88%;
+    margin-left: 1px; /*Same as the width of the sidenav*/    
+}
+
+.sidenav {
+    height: 88%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #828282;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.text-dark{
+    font-size: 2em;
+}
+
+.sidenav a {
+    padding: 6px 6px 6px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.settings{
+    margin-top: 400px;
+}
+
+.fan{
+    margin-left:40%;
+}
+
+
+.height{
+    min-height: 100%;
+}
+
+.hr1{
+    width: 60px;
+    margin-right: 300px;
+    height: 3px;
+    background-color:green;
+    color:#f3f6db;
+    border: 0 none;
+}
+.hr2{
+    width: 60px;
+    /* margin-right: 300px; */
+    margin-top: -4px;
+    height: 3px;
+    background-color:green;
+    color:#f3f6db;
+    border: 0 none;
+    float: left;
+}
+.adjust{
+    margin-top:-1em;
+    font-size: 2em;
+}
+.clear{
+    clear: both;
+}
+.wow{
+    margin-top: 30px;
+}
+
+.switch {
+    position: relative;
+    width: 60px;
+    height: 28px;
+    margin-left: 40%;
+    padding-top: 2%;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: green;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px green;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
